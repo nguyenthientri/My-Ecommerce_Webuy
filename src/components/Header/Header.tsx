@@ -2,6 +2,7 @@ import { useContext } from 'react'
 // import { useState } from 'react'
 // import { useFloating, FloatingPortal } from '@floating-ui/react'
 import { Link, createSearchParams, useNavigate } from 'react-router-dom'
+import logo from '../../assets/img/Screenshot_2025-05-21_125714-removebg-preview.png'
 import useQueryConfig from 'src/hooks/useQueryConfig'
 import { useForm } from 'react-hook-form'
 import { useMutation, useQuery } from '@tanstack/react-query'
@@ -114,20 +115,19 @@ export default function Header() {
             </div>
           )}
         </div>
-        <div className=' grid grid-cols-12 items-end justify-center gap-0'>
-          <Link to='/' className='order-1 col-span-10 sm:order-1 sm:col-span-2'>
-            <img className='h-[40px] sm:h-[60px]' src='src\assets\img\Screenshot 2024-05-14 170515.png' alt='' />
+        <div className=' grid grid-cols-8 items-end justify-center gap-0'>
+          <Link to='/' className='order-1 col-span-3 sm:order-1 sm:col-span-1'>
+            <img className=' h-auto w-full' src={logo} alt='' />
           </Link>
           <form
-            action=''
-            className='order-3 col-span-12 pt-3 sm:order-2 sm:col-span-6 sm:col-start-4 sm:col-end-10 sm:pt-0'
+            className='order-3 col-span-12 pt-3 sm:order-2 sm:col-span-4 sm:col-start-3  sm:pt-0'
             onSubmit={onSubmitSearch}
           >
             <div className='flex rounded-sm bg-white  p-1'>
               <input
                 type='text'
                 placeholder='We buy free ship 0Đ - Đăng ký ngay!'
-                className=' h-8 w-full flex-grow border-none bg-transparent px-3 py-2 text-black outline-none placeholder:italic placeholder:text-slate-400'
+                className='h-8 w-full flex-grow border-none bg-transparent px-3 py-2 text-black outline-none placeholder:italic placeholder:text-slate-400'
                 {...register('name')}
               />
               <button className='py-1.75 flex-shrink-0 rounded-sm bg-rose-600 px-5 hover:opacity-80'>
@@ -148,7 +148,7 @@ export default function Header() {
               </button>
             </div>
           </form>
-          <div className='sm:order-0 order-2 col-span-2 flex justify-center sm:col-start-12 sm:col-end-12'>
+          <div className='sm:order-0 order-2 col-span-2 col-start-8 flex justify-center sm:col-start-12 sm:col-end-12'>
             <i onClick={handleClick}>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
